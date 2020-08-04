@@ -6,4 +6,4 @@ This mod adds a counter that shows how "time dependent" your cuts are, on a scal
 
 The time dependence is measured by the Z component of the normal to your cut plane, see the following for a derivation:
 
-![Proof](/TimeDependenceCounter/Images/proof.png)
+![Proof](/Images/proof.png)
