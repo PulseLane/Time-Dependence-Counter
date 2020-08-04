@@ -1,0 +1,13 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/beat-saber-modding-group/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "TimeDependenceCounter",
+  "name": "TimeDependenceCounter",
+  "author": "PulseLane",
+  "version": "0.0.1",
+  "description": "Adds a counter showing the average of how time-dependent the cuts are",
+  "gameVersion": "1.10.0",
+  "dependsOn": {
+    "Counters+":  "^1.8.4"
+  },
+  "features": []
+}
