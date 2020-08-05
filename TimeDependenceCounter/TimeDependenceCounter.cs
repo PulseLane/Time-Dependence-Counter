@@ -22,7 +22,6 @@ namespace TimeDependenceCounter
         private double _averageB;
 
         private TextMeshProUGUI _counter;
-        //private TextMeshProUGUI _label;
         void Start()
         {
             StartCoroutine(FindScoreController());
@@ -43,23 +42,11 @@ namespace TimeDependenceCounter
             
             _counter = BeatSaberUI.CreateText(canvas.transform as RectTransform, $"", Vector2.zero);
             _counter.alignment = TextAlignmentOptions.Center;
-            //_counter.transform.localScale *= .12f;
             _counter.fontSize = 3f;
             _counter.color = Color.white;
-            //_counter.lineSpacing = -50f;
             _counter.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1f);
             _counter.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 1f);
             _counter.enableWordWrapping = false;
-            //_counter.transform.localPosition = new Vector3(-0.1f, 2.5f, 8f);
-
-            //_label = BeatSaberUI.CreateText(canvas.transform as RectTransform, $"", Vector2.zero);
-            //_label.alignment = TextAlignmentOptions.Center;
-            //_label.fontSize = 3f;
-            //_label.color = Color.white;
-
-            //GameObject labelGO = new GameObject("Time Dependence Counter | Label");
-            //labelGO.transform.parent = transform;
-            //_label.text = "Time Dependence";
 
             _notesA = 0;
             _notesB = 0;
@@ -79,11 +66,6 @@ namespace TimeDependenceCounter
 
         public void OnNoteHit(INoteController data, NoteCutInfo info)
         {
-            //Logger.log.Debug("Note hit");
-            //var x = Utils.sumOfSquares(info.cutNormal);
-            Logger.log.Debug(info.cutNormal.ToString());
-            //Logger.log.Debug($"{x}");
-            //x = Math.Pow(x, -0.5);
             UpdateText(Math.Abs(info.cutNormal.z), info.saberType);
         }
 
