@@ -1,4 +1,5 @@
 ﻿<vertical spacing="1" horizontal--fit="PreferredSize">
   <checkbox-setting text="Separate Saber Dependence" value="separateSaber" hover-hint="Shows the per-saber time dependence" apply-on-change="true"></checkbox-setting>
-  <increment-setting text="Decimal Precision" value="decimalPrecision" integer-only="true" min="0" max="5" increment="1" apply-on-change="true"></increment-setting>
+  <increment-setting text="Decimal Precision" value="decimalPrecision" integer-only="true" min="2" max="5" increment="1" apply-on-change="true"></increment-setting>
+  <checkbox-setting text="Multiply by 100" value="multiply" hover-hint="Multiplies the time dependence by 100 - applies after decimal precision" apply-on-change="true"></checkbox-setting>
 </vertical>
