@@ -1,15 +1,8 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
-using BS_Utils.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 
 namespace TimeDependenceCounter
 {
-    class SettingsHandler : MonoBehaviour
+    class SettingsHandler
     {
         [UIValue("separateSaber")]
         public bool separateSaber
@@ -29,6 +22,17 @@ namespace TimeDependenceCounter
             set
             {
                 Config.decimalPrecision = value;
+                Config.Write();
+            }
+        }
+
+        [UIValue("multiply")]
+        public bool multiply
+        {
+            get => Config.multiply;
+            set
+            {
+                Config.multiply = value;
                 Config.Write();
             }
         }

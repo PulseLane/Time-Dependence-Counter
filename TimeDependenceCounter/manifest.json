@@ -3,11 +3,28 @@
   "id": "TimeDependenceCounter",
   "name": "TimeDependenceCounter",
   "author": "PulseLane",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Adds a counter showing the average of how time-dependent the cuts are",
   "gameVersion": "1.10.0",
   "dependsOn": {
-    "Counters+":  "^1.8.4"
+    "Counters+": "^2.0.0-rc1",
+    "SiraUtil": "^0.3.0"
   },
-  "features": []
+  "features": {
+    "CountersPlus.CustomCounter": {
+      "Name": "Time Dependendence Counter",
+      "Description": "Shows the average time dependence of your cuts",
+      "CounterLocation": "TimeDependenceCounter.TimeDependenceCounter",
+      "ConfigDefaults": {
+        "Enabled": true,
+        "Position": "AboveCombo",
+        "Distance": 0
+      },
+      "BSML": {
+        "Resource": "TimeDependenceCounter.settings.bsml",
+        "Host": "TimeDependenceCounter.SettingsHandler",
+        "Icon": "TimeDependenceCounter.Images.icon.png"
+      }
+    }
+  }
 }
