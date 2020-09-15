@@ -27,7 +27,7 @@ namespace TimeDependenceCounter
 
             Vector3 leftOffset = Vector3.up * -0.2f;
             TextAlignmentOptions leftAlign = TextAlignmentOptions.Top;
-            if (Config.separateSaber)
+            if (Configuration.Instance.separateSaber)
             {
                 _counterRight = CanvasUtility.CreateTextFromSettings(Settings, new Vector3(0.2f, -0.2f, 0));
                 _counterRight.lineSpacing = -26;
@@ -54,7 +54,7 @@ namespace TimeDependenceCounter
 
         public void UpdateText(double timeDependence, SaberType saberType)
         {
-            timeDependence = Config.multiply ? timeDependence * 100 : timeDependence;
+            timeDependence = Configuration.Instance.multiply ? timeDependence * 100 : timeDependence;
             if (saberType == SaberType.SaberA)
             {
                 var x = _averageLeft * _notesLeft + timeDependence;
@@ -73,7 +73,7 @@ namespace TimeDependenceCounter
 
         private void UpdateText()
         {
-            if (Config.separateSaber)
+            if (Configuration.Instance.separateSaber)
             {
                 _counterLeft.text = FormatTimeDependence(_averageLeft, GetDecimals());
                 _counterRight.text = FormatTimeDependence(_averageRight, GetDecimals());
@@ -81,7 +81,7 @@ namespace TimeDependenceCounter
             else
             {
                 var average = (_averageLeft + _averageRight) / 2;
-                _counterLeft.text = FormatTimeDependence(average, Config.decimalPrecision);
+                _counterLeft.text = FormatTimeDependence(average, GetDecimals());
             }
         }
 
@@ -92,7 +92,7 @@ namespace TimeDependenceCounter
 
         private int GetDecimals()
         {
-            return Config.multiply ? Math.Max(Config.decimalPrecision - 2, 0) : Config.decimalPrecision;
+            return Configuration.Instance.multiply ? Math.Max(Configuration.Instance.decimalPrecision - 2, 0) : Configuration.Instance.decimalPrecision;
         }
 
         public override void CounterDestroy() { }

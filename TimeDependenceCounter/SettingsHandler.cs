@@ -7,33 +7,30 @@ namespace TimeDependenceCounter
         [UIValue("separateSaber")]
         public bool separateSaber
         {
-            get => Config.separateSaber;
+            get => Configuration.Instance.separateSaber;
             set
             {
-                Config.separateSaber = value;
-                Config.Write();
+                Configuration.Instance.separateSaber = value;
             }
         }
 
         [UIValue("decimalPrecision")]
         public int decimalPrecision
         {
-            get => Config.decimalPrecision;
+            get => Configuration.Instance.decimalPrecision;
             set
             {
-                Config.decimalPrecision = value;
-                Config.Write();
+                Configuration.Instance.decimalPrecision = value;
             }
         }
 
         [UIValue("multiply")]
         public bool multiply
         {
-            get => Config.multiply;
+            get => Configuration.Instance.multiply;
             set
             {
-                Config.multiply = value;
-                Config.Write();
+                Configuration.Instance.multiply = value;
             }
         }
     }
