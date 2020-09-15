@@ -1,5 +1,5 @@
 ﻿using IPA;
-using IPA.Config;
+using IPA.Config.Stores;
 using IPALogger = IPA.Logging.Logger;
 
 namespace TimeDependenceCounter
@@ -11,9 +11,9 @@ namespace TimeDependenceCounter
         internal static string Name => "TimeDependenceCounter";
 
         [Init]
-        public Plugin(IPALogger logger)
+        public Plugin(IPALogger logger, IPA.Config.Config config)
         {
-            Config.Read();
+            Configuration.Instance = config.Generated<Configuration>();
             instance = this;
             Logger.log = logger;
             Logger.log.Debug("Logger initialized.");

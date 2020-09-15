@@ -5,10 +5,11 @@
   "author": "PulseLane",
   "version": "1.0.0",
   "description": "Adds a counter showing the average of how time-dependent the cuts are",
-  "gameVersion": "1.10.0",
+  "gameVersion": "1.11.1",
   "dependsOn": {
-    "Counters+": "^2.0.0-rc1",
-    "SiraUtil": "^0.3.0"
+    "Counters+": "^2.0.0",
+    "BeatSaberMarkupLanguage": "^1.3.2",
+    "BSIPA": "^4.1.0"
   },
   "features": {
     "CountersPlus.CustomCounter": {
