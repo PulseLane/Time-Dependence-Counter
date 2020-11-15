@@ -48,7 +48,7 @@ namespace TimeDependenceCounter
 
         public void OnNoteCut(NoteData data, NoteCutInfo info)
         {
-            if (data.noteType == NoteType.Bomb || !info.allIsOK) return;
+            if (data.colorType == ColorType.None || !info.allIsOK) return;
             UpdateText(Math.Abs(info.cutNormal.z), info.saberType);
         }
 
