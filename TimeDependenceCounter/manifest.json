@@ -16,6 +16,7 @@
       "Name": "Time Dependendence Counter",
       "Description": "Shows the average time dependence of your cuts",
       "CounterLocation": "TimeDependenceCounter.TimeDependenceCounter",
+      "MultiplayerReady": true,
       "ConfigDefaults": {
         "Enabled": true,
         "Position": "AboveCombo",
