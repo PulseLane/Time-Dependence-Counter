@@ -3,11 +3,11 @@
   "id": "TimeDependenceCounter",
   "name": "TimeDependenceCounter",
   "author": "PulseLane",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Adds a counter showing the average of how time-dependent the cuts are",
   "gameVersion": "1.13.4",
   "dependsOn": {
-    "Counters+": "^2.2.0",
+    "Counters+": "^2.3.0",
     "BeatSaberMarkupLanguage": "^1.4.5",
     "BSIPA": "^4.1.4"
   },
